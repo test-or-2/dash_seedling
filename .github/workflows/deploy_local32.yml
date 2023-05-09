@@ -1,0 +1,15 @@
+---
+name: Deploy local32
+
+on:
+  push:
+    branches:
+      - "local32"
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/acr_deploy_reusable.yml
+    name: Deploy local32
+    with:
+      environment: local32
+    secrets: inherit
